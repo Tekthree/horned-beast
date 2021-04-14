@@ -1,4 +1,64 @@
-# Getting Started with Create React App
+
+# HornedBeasts App
+
+
+## Author // Tek Jones
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## Time Estimate
+
+Number and name of feature: Feature 1 - Display images
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:20pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## Features
+
+### Feature #1: Display images -----
+
+Why are we implementing this feature?
+- As a user, I want to view the images on the page so that I can browse the photo collection.
+
+What are we going to implement?
+- Given that a user opens the application in the browser. When the user navigates to the home page, Then the photo gallery should display all of the images in the gallery
+
+How are we implementing it?
+- The Main component should pass props for the title, image and description to each HornedBeast component. You will find this information in the provided JSON file.
+
+### Feature #2: Allow users to vote for their favorite beast -----
+
+Why are we implementing this feature?
+- As a user, I want to be able to interact with the site and pick my favorite beast.
+
+What are we going to implement?
+- Given that a user clicks on an image, the number of “favorites” displayed on that image will increase by one.
+
+How are we implementing it?
+- Create state inside of the HornedBeast component that keeps track of the number of times an image was clicked.
+
+Put a heart in each horned beast with the number of times it was “favorited” next to it.
+
+### Feature 3: Bootstrap -----
+
+Why are we implementing this feature?
+- As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
+
+What are we going to implement?
+- Given that a user opens the application in the browser. When the images are displayed on the screen .Then each image should be rendered in a visually pleasing way. The images should be displayed in columns, as screen width allows
+
+How are we implementing it?
+- Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +99,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Time Estimate
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
