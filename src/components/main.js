@@ -1,10 +1,13 @@
 import {CardColumns, Container, Card} from 'react-bootstrap';
 import items from '../data.json';
-import {Component} from 'react';
+import {Component, useRef} from 'react';
+
+import{tweenMax, Power3} from 'gsap'
 
 export default function Main(){
+  let navItem = useRef(null)
 
-  
+  console.log(navItem);
 
   return (
     <Container fluid>
