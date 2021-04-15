@@ -2,22 +2,34 @@ import { CardColumns, Container, Card} from 'react-bootstrap';
 import items from '../data.json';
 import {Component} from 'react';
 
-function Main(){
+export default function Main(){
 
   
 
   return (
     <Container fluid>
-
       <CardColumns>
-        {items.map(item => {
-          <HornedBeast/>
-        })}  
+
+        {items.map(item =>{
+          return(
+            <HornedBeast
+              title={item.title}
+              description={item.description}
+              imgUrl={item.image_url}
+            />
+          )
+        })}
+          <HornedBeast
+          
+          
+          />
+        
       </CardColumns>
+
       
     </Container>
     
-    )
+    );
 }
 
 class HornedBeast extends Component{
@@ -34,8 +46,10 @@ class HornedBeast extends Component{
         bg="dark"
         text="light"
        >
+         <h2>Does this work</h2>
+         <Card.Img src={this.props.imgUrl}></Card.Img>
          <Card.Body>
-          <Card.Title>The Bumb </Card.Title>
+          <Card.Title>The Bumb {this.props.title} </Card.Title>
           <Card.Text>
             😍 = is this working
 
@@ -54,4 +68,3 @@ class HornedBeast extends Component{
  
 }
 
-export default Main;
