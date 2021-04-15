@@ -3,6 +3,8 @@ import items from '../data.json';
 import React, {useRef, useEffect} from 'react';
 import { ReactComponent as Logo } from '../beast.svg';
 import{TweenMax, Power3} from 'gsap'
+import MyModal from './modal.js'
+
 
 export default function Main(){
   let navItem = useRef(null)
@@ -39,23 +41,26 @@ export default function Main(){
 
   return (
     <div>
-
       <div className="logo-contain">
         <Logo ref={el=>{navItem = el}} className="logo"/> 
-
+        
       </div>
 
-      
-
+     
     <Container fluid>
+      
       <CardColumns ref={el=>{cards = el}} className='beast'>
         {items.map(item =>{
           return(
-            <HornedBeast
-              title={item.title}
-              description={item.description}
-              imgUrl={item.image_url}
-            />
+            <>
+              <HornedBeast
+                title={item.title}
+                description={item.description}
+                imgUrl={item.image_url}
+                
+              />
+              <MyModal/> 
+            </>
           )
         })}
       </CardColumns>
