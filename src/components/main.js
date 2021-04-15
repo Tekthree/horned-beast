@@ -1,4 +1,4 @@
-import {CardColumns, Container, Card} from 'react-bootstrap';
+import {CardColumns, Container, Card, Navbar} from 'react-bootstrap';
 import items from '../data.json';
 import React, {useRef, useEffect} from 'react';
 import { ReactComponent as Logo } from '../beast.svg';
@@ -43,8 +43,12 @@ export default function Main(){
     <div>
       <div className="logo-contain">
         <Logo ref={el=>{navItem = el}} className="logo"/> 
-        
       </div>
+    <Container fluid className="dropdown-filter">
+       <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Horned Beast</Navbar.Brand>
+      </Navbar>
+    </Container>
 
      
     <Container fluid>
@@ -59,7 +63,7 @@ export default function Main(){
                 imgUrl={item.image_url}
                 
               />
-              <MyModal/> 
+              
             </>
           )
         })}
@@ -104,7 +108,15 @@ class HornedBeast extends React.Component{
           <Card.Text>
             {this.props.description}
           </Card.Text>
-        </Card.Body>
+          
+              
+              <MyModal
+                
+              />
+                
+              
+            
+          </Card.Body>
 
        </Card>
      )
