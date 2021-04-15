@@ -1,4 +1,4 @@
-import { CardColumns, Container, Card} from 'react-bootstrap';
+import {CardColumns, Container, Card} from 'react-bootstrap';
 import items from '../data.json';
 import {Component} from 'react';
 
@@ -19,10 +19,7 @@ export default function Main(){
             />
           )
         })}
-          <HornedBeast
           
-          
-          />
         
       </CardColumns>
 
@@ -36,7 +33,14 @@ class HornedBeast extends Component{
 
   constructor(props){
     super(props);
+    this.state = {
+      likes: 0
+    }
 
+  }
+
+  addFavorite = () =>{
+    this.setState({likes: this.state.likes + 1});
   }
   
   render() {
@@ -45,13 +49,14 @@ class HornedBeast extends Component{
        <Card
         bg="dark"
         text="light"
+        onClick={this.addFavorite}
        >
-         <h2>Does this work</h2>
+         
          <Card.Img src={this.props.imgUrl}></Card.Img>
          <Card.Body>
           <Card.Title>The Bumb {this.props.title} </Card.Title>
           <Card.Text>
-            😍 = is this working
+            😍 = {this.state.likes}
 
           </Card.Text>
           <Card.Text>
