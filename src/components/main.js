@@ -54,13 +54,14 @@ export default function Main(){
     <Container fluid>
       
       <CardColumns ref={el=>{cards = el}} className='beast'>
-        {items.map(item =>{
+        {items.map((item,index) =>{
           return(
             <>
               <HornedBeast
                 title={item.title}
                 description={item.description}
                 imgUrl={item.image_url}
+                index={index}
                 
               />
               
@@ -76,14 +77,18 @@ export default function Main(){
 }
 
 class HornedBeast extends React.Component{
-
+ 
   constructor(props){
     super(props);
     this.state = {
-      likes: 0
+      likes: 0,
+      index: this.props.index
     }
 
   }
+  
+ 
+  
 
   addFavorite = () =>{
     this.setState({likes: this.state.likes + 1});
@@ -102,7 +107,7 @@ class HornedBeast extends React.Component{
          <Card.Body>
           <Card.Title>The Bumb {this.props.title} </Card.Title>
           <Card.Text>
-            😍 = {this.state.likes}
+            😍 = {this.state.likes} 
 
           </Card.Text>
           <Card.Text>
@@ -111,7 +116,7 @@ class HornedBeast extends React.Component{
           
               
               <MyModal
-                
+                index={this.state.index}
               />
                 
               

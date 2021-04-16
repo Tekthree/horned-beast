@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
+import Card from 'react-bootstrap/Card'
+import items from '../data.json'
 
 export default class MyModal extends Component {
   constructor(props){
@@ -23,14 +25,30 @@ export default class MyModal extends Component {
     return(
       <div>
         <Button variant="primary" onClick={()=> this.setState({showModal:true })}>
-          Is this my Modal
+          More Details
         </Button>
 
         <Modal show={this.state.showModal} onClose={this.closeModalHandler}>
           <Modal.Header closeButton onClick={()=> this.setState({showModal:false })}>
-            <Modal.Title>Horned Beast</Modal.Title>
+            <Modal.Title>{items[this.props.index].keyword}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>We got that Modal Baby</Modal.Body>
+          <Modal.Body>
+
+            <Card.Img src={items[this.props.index].image_url}></Card.Img>
+            <Card.Body>
+              <Card.Title>{items[this.props.index].title} </Card.Title>
+
+              <Card.Text>
+                Horn count: {items[this.props.index].horns}
+              </Card.Text>
+            
+              <Card.Text>
+                {items[this.props.index].description}
+              </Card.Text>
+      
+            </Card.Body>
+          
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={()=> this.setState({showModal:false })}>
               Close
