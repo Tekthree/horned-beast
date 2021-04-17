@@ -1,9 +1,10 @@
-import {CardColumns, Container, Card, Navbar} from 'react-bootstrap';
+import {CardColumns, Container, Card} from 'react-bootstrap';
 import items from '../data.json';
 import React, {useRef, useEffect} from 'react';
 import { ReactComponent as Logo } from '../beast.svg';
 import{TweenMax, Power3} from 'gsap'
 import MyModal from './modal.js'
+import DropDown from './dropDrop.js'
 
 
 export default function Main(){
@@ -44,11 +45,8 @@ export default function Main(){
       <div className="logo-contain">
         <Logo ref={el=>{navItem = el}} className="logo"/> 
       </div>
-    <Container fluid className="dropdown-filter">
-       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Horned Beast</Navbar.Brand>
-      </Navbar>
-    </Container>
+
+      <DropDown filter={this.filterHorns} />
 
      
     <Container fluid>

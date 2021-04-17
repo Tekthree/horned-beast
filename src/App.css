@@ -46,3 +46,27 @@
 .beast{
   opacity:0;
 }
+
+.contain{
+  
+  margin-left:10vw;
+  margin-right:10vw;
+}
+
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+
+  .contain{
+    margin-left:5vw;
+    margin-right:5vw;
+  }
+}
+
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+
+  .contain{
+    margin-left:3vw;
+    margin-right:3vw;
+  }
+}
