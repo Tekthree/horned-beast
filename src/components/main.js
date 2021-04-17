@@ -9,8 +9,8 @@ import DropDown from "./dropDrop.js";
 export default function Main() {
   let navItem = useRef(null);
   let cards = useRef(null);
-  const [hornVal, setHornVal] = useState('');
-
+  const [hornVal, setHornVal] = useState([]);
+  console.log("this is hornVal",hornVal)
   useEffect(() => {
     console.log(navItem);
     TweenMax.to(navItem, 0.8, {
